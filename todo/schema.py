@@ -1,8 +1,8 @@
 instructions = [
-    'SET FOREING_KEY_CHECKS=0;',
+    'SET FOREIGN_KEY_CHECKS=0;',
     'DROP TABLE IF EXISTS todo;',
     'DROP TABLE IF EXISTS user;',
-    'SET FOREING_KEY_CHECKS=1;',
+    'SET FOREIGN_KEY_CHECKS=1;',
     """
         CREATE TABLE user (
             id INT PRIMARY KEY AUTO_INCREMENT,
@@ -17,7 +17,7 @@ instructions = [
             created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
             description TEXT NOT NULL,
             completed BOOLEAN NOT NULL,
-            FOREING KEY (created_by) REFERENCES user (id)
+            FOREIGN KEY (created_by) REFERENCES user (id)
        ); 
     """
 ]
