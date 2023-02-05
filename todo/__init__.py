@@ -11,7 +11,7 @@ def create_app():
         DATABASE_USER = os.environ.get('FLASK_DATABASE_USER'),
         DATABASE = os.environ.get('FLASK_DATABASE')
     )
- 
+
     from . import db
 
     #llamamos la funcion de db init para cargar nuestra base a la app
@@ -29,6 +29,3 @@ def create_app():
         return 'Creando Proyecto'
     
     return app
-
-
- 
